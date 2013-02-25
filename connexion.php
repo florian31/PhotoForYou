@@ -11,7 +11,6 @@ include('./include/entete.php');
         
     <?php
     
-    include('./include/cotedroit.php');
     include('./include/pieddepage.php');
     ?>
 </div>

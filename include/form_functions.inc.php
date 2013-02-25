@@ -1,6 +1,7 @@
 <?php
 
-function create_form_input($name, $type, $errors, $valeurs) {
+function create_form_input($name, $type, $errors, $valeurs) 
+{
 	
 
 	$value = false;
@@ -42,14 +43,3 @@ function create_form_input($name, $type, $errors, $valeurs) {
         }// Fin du IF-ELSE principal.
 
 } // Fin de la fonction create_form_input().
-
-function get_password_hash($password) 
-{
-	
-	// A besoin de la connexion à la base de données :
-	global $dbc;
-	
-	// Renvoyer le mot de passe échappé :
-	return mysqli_real_escape_string ($dbc, sha1($password,false));
-	
-} // Fin de la fonction get_password_hash().

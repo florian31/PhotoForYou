@@ -1,30 +1,19 @@
 <?php
-require('./include/mysql.inc.php');
 require('./include/config.inc.php');
+// Réclame la connexion à la base
+require (MYSQL);
+
+// Evite la notice lorsque le POST n'est pas encore défini (ex: email)
+if ($_SERVER['REQUEST_METHOD'] == 'POST') 
+{
+	include ('./include/login.inc.php');
+}
 include('./include/entete.php');
 ?>
-    <div id="body">
-	<div id="content">
-      
-        </div>
-        
-        
-    <?php
-    if (isset($_POST['email']) && isset($_POST['pass'])) 
-    {
-        $email=$_POST['email'];
-        $pass=$_POST['pass'];
-        unset($_SESSION['user']);
-        if ($email=="toto@toto.fr" and $pass=="toto")
-        {
-            $_SESSION['user']=10;
-      
-        }
-    }
-    include('./include/cotedroit.php');
+
+<h3>Bienvenue</h3>
+<p>Bienvenue dans PhotoForYou un site pour acheter ou vendre des photos artisiques et professionnelles.</p>
+
+<?php 
     include('./include/pieddepage.php');
-   
-    ?>
-</div>
-</body>
-</html>
+?>
