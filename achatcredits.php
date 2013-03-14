@@ -5,6 +5,8 @@ include('./include/entete.php');
 ?>
 
     <div id="body">
+        
+        
 	<div id="content">
 			
         </div>
